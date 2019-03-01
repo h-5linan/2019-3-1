@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="box">
+			<input type="number" v-model="width"/>
+			<input type="number" v-model="height"/><br />
+			<input type="range" min="0" max="255" v-model="r"/><br />
+			<input type="range" min="0" max="255" v-model="g"/><br />
+			<input type="range" min="0" max="255" v-model="b"/>
+			<div v-bind:style="{width:width+'px',height:height+'px',background:'rgb('+r+','+g+','+b+')'}">
+				beijing
+			</div>
+		</div>
+	</body>
+</html>
+	<script src="js/vue.js"></script>
+	<script>
+		var vm = new Vue({
+			el:".box",
+			data:{
+				width:200,
+				height:200,
+				color:"#000",
+				r:0,
+				g:0,
+				b:0
+				
+			}
+		});
+		console.log(vm);
+	</script>
