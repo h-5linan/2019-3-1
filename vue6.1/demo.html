@@ -3,7 +3,21 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<style>
+			.navImssgae{
+				width:300px;
+				height:300px;
+				background:#c33;
+				color:#fff;
+				text-align: center;
+				line-height: 300px;
+				font-size: 12px;
+			}
+		</style>
 	</head>
+	<style>
+		
+	</style>
 	<body>
 		<div class="box">
 			<input type="number" v-model="width"/>
@@ -13,6 +27,11 @@
 			<input type="range" min="0" max="255" v-model="b"/>
 			<div v-bind:style="{width:width+'px',height:height+'px',background:'rgb('+r+','+g+','+b+')'}">
 				beijing
+			</div>
+			
+			<div class="nav">
+				<p class="navImssgae">{{p}}</p>
+				
 			</div>
 		</div>
 	</body>
@@ -27,7 +46,8 @@
 				color:"#000",
 				r:0,
 				g:0,
-				b:0
+				b:0,
+				p:"今天是周六，明天老高去宁波出差，不能确定返回时间！"
 				
 			}
 		});
